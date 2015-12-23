@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="aasa.aasa.hangman.HomeActivity"
+    tools:showIn="@layout/activity_home">
+
+    <!--<aasa.aasa.hangman.TextClass-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="5dp"-->
+        <!--android:text="Hangman"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="75sp"-->
+        <!--android:id="@+id/view2" />-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:paddingTop="-30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/title"/>
+
+
+    <!--<aasa.aasa.hangman.TextClass-->
+        <!--android:id="@+id/play"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="@drawable/play_btn_oval"-->
+        <!--android:elevation="8dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Play"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="60sp" />-->
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/play_btn"
+        android:layout_centerInParent="true"/>
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/aa"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="150dp"-->
+        <!--android:layout_alignLeft="@+id/play"-->
+        <!--android:layout_alignStart="@+id/play" />-->
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:background="@drawable/menu_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="118dp">
+
+        <ImageButton
+            android:id="@+id/instruction"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:elevation="4dp"
+            android:layout_marginLeft="74dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/info"/>
+
+        <ImageButton
+            android:id="@+id/sound"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/volume"
+            android:background="@null"
+            android:layout_alignParentRight="true"
+            android:elevation="4dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="73dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/leaderboard"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:text="sound"
+            android:scaleType="fitXY"
+            android:elevation="4dp"
+            android:src="@drawable/leaderboard" />
+
+    </LinearLayout>
+</RelativeLayout>

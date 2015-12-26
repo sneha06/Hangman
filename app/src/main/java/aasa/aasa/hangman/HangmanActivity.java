@@ -30,13 +30,13 @@ public class HangmanActivity extends Activity {
     String a, wholeword;
     int z = 0, k = 0;
     Random random = new Random();
-    int randno, wordr1, wordr2,userscore = 50;
+    int randno, wordr1, wordr2, userscore = 50;
 
     TextView wordtextView, score;
     TextView[] textViews;
     ImageView imageView;
-    LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4, linearLayout5;
-    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+    LinearLayout linearLayout2, linearLayout3, linearLayout4, linearLayout5;
+//    LinearLayout.LayoutParams params;
 
     int underscorecount = 0;
 
@@ -46,6 +46,7 @@ public class HangmanActivity extends Activity {
         setContentView(R.layout.activity_hangman);
 
         imageView = (ImageView) findViewById(R.id.circle);
+        score = (TextView) findViewById(R.id.score);
 
         randno = random.nextInt(words.length);
         wholeword = words[randno];
@@ -56,16 +57,16 @@ public class HangmanActivity extends Activity {
             // System.out.println(String.valueOf(randchar[i]));
             word[i] = randchar[i];
         }
-        score = (TextView) findViewById(R.id.score);
-        params.setMargins(2,2,2,2);
-        linearLayout1 = (LinearLayout) findViewById(R.id.l1);
+
+//        params = new LinearLayout.LayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+//        params.setMargins(2, 2, 4, 2);
         linearLayout2 = (LinearLayout) findViewById(R.id.l2);
         linearLayout3 = (LinearLayout) findViewById(R.id.l3);
         linearLayout4 = (LinearLayout) findViewById(R.id.l4);
         linearLayout5 = (LinearLayout) findViewById(R.id.l5);
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
-        userscore = sharedPreferences.getInt("Score",50);
+        userscore = sharedPreferences.getInt("Score", 50);
         score.setText(String.valueOf(userscore));
 
         wordrandomtext(word);
@@ -79,22 +80,19 @@ public class HangmanActivity extends Activity {
 
             wordtextView.setText("_");
             wordtextView.setId(word[i]);
-            //System.out.println(wordtextView.getId());
-            wordtextView.setWidth(90);
-            wordtextView.setHeight(90);
-            wordtextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+            wordtextView.setWidth((int) getResources().getDimension(R.dimen.game_alphbets_blank_text_width));
+            wordtextView.setHeight((int) getResources().getDimension(R.dimen.game_alphbets_blank_text_width));
+            wordtextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.game_blank_text_size));
             linearLayout5.addView(wordtextView);
             textViews[i] = wordtextView;
         }
-        for (int i = 0; i < textViews.length; i++) {
-            System.out.println("....." + textViews[i].getId());
-        }
+
         for (int i = 0; i < line1.length; i++) {
 
             final TextView textView = new TextView(HangmanActivity.this);
             textView.setId(i);
             textView.setText(String.valueOf(line1[i]));
-            setTextViews(textView,i);
+            setTextViews(textView, i);
             linearLayout2.addView(textView);
         }
         for (int i = 0; i < line2.length; i++) {
@@ -126,7 +124,7 @@ public class HangmanActivity extends Activity {
     }
 
     void setimg(int p, int q) {
-        System.out.println("  setimage q=0 " + z + " " + k);
+//        System.out.println("  setimage q=0 " + z + " " + k);
 
         if ((p == 0) && (q == 0)) {
             k++;
@@ -209,7 +207,7 @@ public class HangmanActivity extends Activity {
 
 
     void checkCompletion() {
-        System.out.println("Entered in checkcomplition");
+//        System.out.println("Entered in check complition");
         underscorecount = 0;
         for (int i = 0; i < textViews.length; i++) {
             if (textViews[i].getText().toString().equals("_")) {
@@ -248,43 +246,44 @@ public class HangmanActivity extends Activity {
 
         }
     }
-    void score(int s){
+
+    void score(int s) {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("Score",s);
+        editor.putInt("Score", s);
         editor.commit();
 
     }
-    void increaseScore(){
-        userscore = userscore +5;
+
+    void increaseScore() {
+        userscore = userscore + 5;
         score.setText(String.valueOf(userscore));
         score(userscore);
     }
-    void decreaseScore(){
-        userscore = userscore -1;
+
+    void decreaseScore() {
+        userscore = userscore - 1;
         score.setText(String.valueOf(userscore));
         score(userscore);
     }
-    void setTextViews(final TextView textView, int i){
+
+    void setTextViews(final TextView textView, int i) {
         textView.setGravity(Gravity.CENTER);
-        textView.setWidth(70);
-        textView.setHeight(70);
+        textView.setWidth((int) getResources().getDimension(R.dimen.game_alphbets_text_width));
+        textView.setHeight((int) getResources().getDimension(R.dimen.game_alphbets_text_height));
         textView.setBackgroundColor(getResources().getColor(R.color.cyan));
-        textView.setLayoutParams(params);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+//        textView.setLayoutParams(params);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.game_text_size));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                System.out.println("  On click value x n z " + z + " " + k);
                 textView.setClickable(false);
                 a = textView.getText().toString();
-//                System.out.println(a);
                 for (int i = 0; i < word.length; i++) {
-                    System.out.println("a = " +a);
-//                    System.out.println(String.valueOf(word[i]));
                     if (a.equals(Character.toString((char) textViews[i].getId()))) {
                         textViews[i].setText(String.valueOf(word[i]));
-                        System.out.println("matched");
+//                        System.out.println("matched");
                         textView.setBackgroundColor(getResources().getColor(R.color.green));
                         z = 1;
                         checkCompletion();

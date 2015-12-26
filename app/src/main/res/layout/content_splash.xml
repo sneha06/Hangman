@@ -7,8 +7,8 @@
     tools:context="aasa.aasa.hangman.splashActivity"
     android:background="@drawable/bg">
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="@dimen/splash_image_size"
+        android:layout_height="@dimen/splash_image_size"
         android:src="@drawable/hangman"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="40dp"/>
@@ -21,5 +21,5 @@
         android:gravity="center"
         android:padding="10dp"
         android:textSize="80dp"
-        android:layout_marginBottom="70dp"/>
+        android:layout_marginBottom="@dimen/splash_text_margin_bottom"/>
 </RelativeLayout>

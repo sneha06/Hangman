@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="exit_dialog_width">350dp</dimen>
+    <dimen name="exit_dialog_height">370dp</dimen>
+    <dimen name="game_over_title_padding">30dp</dimen>
+    <dimen name="game_over_component_text_size">40sp</dimen>
+    <dimen name="game_over_image_button_size">60dp</dimen>
+    <dimen name="game_over_score_board_padding">30dp</dimen>
+    <dimen name="game_over_score_board_margin_top">20dp</dimen>
+    <dimen name="hangman_image_height">240dp</dimen>
+    <dimen name="alphabet_layout_height">75dp</dimen>
+    <dimen name="hangman_image_margin_top">20dp</dimen>
+    <dimen name="alphabet_layout_margin_top">10dp</dimen>
+    <dimen name="alphabet_layout_padding">15dp</dimen>
+    <dimen name="home_title_height">120dp</dimen>
+    <dimen name="play_button_width">200dp</dimen>
+    <dimen name="play_button_height">85dp</dimen>
+    <dimen name="menu_bg_width">240dp</dimen>
+    <dimen name="menu_bg_height">160dp</dimen>
+    <dimen name="home_image_button_size">65dp</dimen>
+    <dimen name="home_layout2_margin_bottom">40dp</dimen>
+    <dimen name="home_layout_margin_bottom">118dp</dimen>
+    <dimen name="info_title_margin_top">40dp</dimen>
+    <dimen name="info_text_size">30sp</dimen>
+    <dimen name="info_cancel_btn_size">35dp</dimen>
+    <dimen name="exit_image_size">60dp</dimen>
+    <dimen name="exit_close_btn_size">30dp</dimen>
+
+    <dimen name="game_alphbets_text_width">30dp</dimen>
+    <dimen name="game_alphbets_text_height">30dp</dimen>
+    <dimen name="game_alphbets_blank_text_width">33dp</dimen>
+    <dimen name="game_alphbets_blank_text_height">33dp</dimen>
+    <dimen name="home_info_icon_margin_left">74dp</dimen>
+    <dimen name="home_sound_icon_margin_right">73dp</dimen>
+    <dimen name="home_title_margin_right">40dp</dimen>
+    <dimen name="exit_title_image_width">120dp</dimen>
+    <dimen name="exit_dialog_text_margin_top">40dp</dimen>
+    <dimen name="exit_title_image_height">70dp</dimen>
+
+    <dimen name="game_text_size">25sp</dimen>
+    <dimen name="game_blank_text_size">30sp</dimen>
+    <dimen name="splash_text_margin_bottom">70dp</dimen>
+    <dimen name="splash_image_size">300dp</dimen>
+    <dimen name="game_over_button_layout_margin_bottom">50dp</dimen>
+</resources>

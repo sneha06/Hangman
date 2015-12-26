@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,9 +26,9 @@ public class ExitDialogFragment extends DialogFragment implements View.OnClickLi
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         getDialog().setCanceledOnTouchOutside(true);
 
-        TextView yesText = (TextView) rootView.findViewById(R.id.yes_text);
-        TextView noText = (TextView) rootView.findViewById(R.id.no_text);
-        ImageView close = (ImageView) rootView.findViewById(exit_close);
+        ImageButton yesText = (ImageButton) rootView.findViewById(R.id.yes_text);
+        ImageButton noText = (ImageButton) rootView.findViewById(R.id.no_text);
+        ImageView close = (ImageView) rootView.findViewById(R.id.exit_close);
 
         yesText.setOnClickListener(this);
         noText.setOnClickListener(this);

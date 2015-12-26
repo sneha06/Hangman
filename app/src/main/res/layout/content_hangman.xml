@@ -14,10 +14,10 @@
     <ImageView
         android:id="@+id/circle"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="@dimen/hangman_image_height"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="@dimen/hangman_image_margin_top" />
 
     <LinearLayout
         android:id="@+id/l1"
@@ -35,70 +35,73 @@
         <LinearLayout
             android:id="@+id/l5"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alphabet_layout_margin_top"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="center">
+            android:padding="@dimen/alphabet_layout_padding">
+
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/l2"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alphabet_layout_margin_top"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="center">
+            android:padding="@dimen/alphabet_layout_padding">
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/l3"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alphabet_layout_margin_top"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="center">
+            android:padding="@dimen/alphabet_layout_padding">
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/l4"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/alphabet_layout_margin_top"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:padding="15dp"
-            android:gravity="center">
+            android:padding="@dimen/alphabet_layout_padding">
+
 
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="50"
         android:id="@+id/score"
-        android:layout_marginTop="30dp"
-        android:layout_alignTop="@+id/circle"
-        android:layout_alignRight="@+id/l1"
-        android:layout_alignEnd="@+id/l1"
-        android:textSize="25sp"
-        android:layout_marginRight="10dp"
-        android:padding="10dp"/>
-    <aasa.aasa.hangman.TextClass
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=" Score "
-        android:id="@+id/scoretext"
-        android:layout_below="@+id/score"
-        android:layout_alignTop="@+id/circle"
-        android:layout_alignRight="@+id/l1"
         android:layout_alignEnd="@+id/l1"
+        android:layout_alignRight="@+id/l1"
+        android:layout_alignTop="@+id/circle"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:text="50"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="25sp" />
+
+    <aasa.aasa.hangman.TextClass
+        android:id="@+id/scoretext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/l1"
+        android:layout_alignRight="@+id/l1"
+        android:layout_alignTop="@+id/circle"
+        android:layout_below="@+id/score"
+        android:text=" Score "
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="25sp" />
 </RelativeLayout>

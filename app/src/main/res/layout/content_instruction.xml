@@ -13,7 +13,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/info_title_margin_top"
         android:gravity="center"
         android:padding="5dp"
         android:text="Instruction"
@@ -29,11 +29,12 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="10dp"
         android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:paddingTop="10dp"
+        android:gravity="center"
         android:text="@string/Instruction"
-        android:textSize="30sp" />
+        android:textSize="@dimen/info_text_size" />
 
     <aasa.aasa.hangman.TextClass
         android:id="@+id/play"
@@ -64,8 +65,8 @@
 
     <ImageView
         android:id="@+id/close"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="@dimen/info_cancel_btn_size"
+        android:layout_height="@dimen/info_cancel_btn_size"
         android:src="@drawable/close"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"

@@ -9,33 +9,23 @@
     tools:context="aasa.aasa.hangman.GameoverActivity"
     tools:showIn="@layout/activity_gameover">
 
-    <!--<aasa.aasa.hangman.TextClass-->
-        <!--android:id="@+id/game_over_title"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="20dp"-->
-        <!--android:gravity="center"-->
-        <!--android:padding="10dp"-->
-        <!--android:text="GAME OVER"-->
-        <!--android:textColor="@android:color/white"-->
-        <!--android:textSize="50sp" />-->
-
     <ImageView
         android:id="@+id/game_over_title"
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/game_over"/>
+        android:padding="@dimen/game_over_title_padding"
+        android:src="@drawable/game_over" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/game_over_title"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/game_over_score_board_margin_top"
         android:background="#576069"
-        android:padding="30dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/game_over_score_board_padding">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,24 +39,24 @@
                 android:padding="5dp"
                 android:text="Score : "
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
 
             <TextView
                 android:id="@+id/scoreView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="50"
                 android:gravity="end"
+                android:text="50"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
             <aasa.aasa.hangman.TextClass
                 android:layout_width="wrap_content"
@@ -74,24 +64,24 @@
                 android:padding="5dp"
                 android:text="Total Game : "
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
 
             <TextView
                 android:id="@+id/no_of_game"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="50"
                 android:gravity="end"
+                android:text="50"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
             <aasa.aasa.hangman.TextClass
                 android:layout_width="wrap_content"
@@ -99,24 +89,24 @@
                 android:padding="5dp"
                 android:text="Total Win : "
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
 
             <TextView
                 android:id="@+id/no_of_win"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="50"
                 android:gravity="end"
+                android:text="50"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
             <aasa.aasa.hangman.TextClass
                 android:layout_width="wrap_content"
@@ -124,17 +114,17 @@
                 android:padding="5dp"
                 android:text="Total Lose : "
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
 
             <TextView
                 android:id="@+id/no_of_lose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="50"
                 android:gravity="end"
+                android:text="50"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white"
-                android:textSize="40sp" />
+                android:textSize="@dimen/game_over_component_text_size" />
         </LinearLayout>
     </LinearLayout>
 
@@ -142,21 +132,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/game_over_button_layout_margin_bottom"
         android:gravity="center">
 
         <ImageButton
             android:id="@+id/go_replay"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/game_over_image_button_size"
+            android:layout_height="@dimen/game_over_image_button_size"
             android:background="@drawable/btn_circle"
             android:scaleType="fitXY"
             android:src="@drawable/replay" />
 
         <ImageButton
             android:id="@+id/go_home"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/game_over_image_button_size"
+            android:layout_height="@dimen/game_over_image_button_size"
             android:layout_marginLeft="10dp"
             android:background="@drawable/btn_circle"
             android:scaleType="fitXY"
@@ -164,8 +154,8 @@
 
         <ImageButton
             android:id="@+id/go_leaderboard"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/game_over_image_button_size"
+            android:layout_height="@dimen/game_over_image_button_size"
             android:layout_marginLeft="10dp"
             android:background="@drawable/btn_circle"
             android:scaleType="fitXY"
@@ -173,8 +163,8 @@
 
         <ImageButton
             android:id="@+id/go_volume"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/game_over_image_button_size"
+            android:layout_height="@dimen/game_over_image_button_size"
             android:layout_marginLeft="10dp"
             android:background="@drawable/btn_circle"
             android:scaleType="fitXY"

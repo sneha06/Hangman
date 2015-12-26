@@ -4,7 +4,7 @@
     <string name="title_activity_hangman">HangmanActivity</string>
     <string name="title_activity_exit">ExitActivity</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="Instruction">HangMan is the classical hangman game. The player should guess a word letter by letter. At each miss, the picture of a hangman appears. After 5 tries, if the word is not guessed, the game is over and the answer is displayed.</string>
+    <string name="Instruction">Hangman is the classical word puzzle game. The player should guess a word, letter by letter. At each miss, the part of hangman picture appears. After 6 tries, if the word is not guessed, the game is over and the answer is displayed.</string>
     <string name="title_activity_instruction">InstructionActivity</string>
     <string name="app_id">367423367899</string>
     <string name="leaderboard_id">CgkI29WO4dgKEAIQAQ</string>

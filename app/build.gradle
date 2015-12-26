@@ -1,15 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'HangmanKey'
-            keyPassword 'ktc899'
-            storeFile file('/media/sneha/35DAB48827122D43/hangman/app/ketstore.jks')
-            storePassword 'ktc899'
-        }
-    }
-    compileSdkVersion 23
+   compileSdkVersion 23
     buildToolsVersion "23.0.1"
     defaultConfig {
         applicationId "aasa.aasa.hangman"
@@ -23,21 +15,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
-            signingConfig signingConfigs.config
-        }
+        
     }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile project(':BaseGameUtils')
-    compile files('libs/aerserv-sdk-min.jar')
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
-    compile 'com.google.android.gms:play-services:8.4.0'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
-    compile 'com.google.android.gms:play-services-identity:8.4.0'
-    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services:8.3.0'
+    compile project(':BaseGameUtils')
+    compile files('libs/aerserv-sdk-min.jar')
 }
